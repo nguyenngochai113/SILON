@@ -1,0 +1,119 @@
+
+section.gallery{
+    margin: 0;
+}
+.gallery{
+    width: 100%;
+    background-color: #fafafa;
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+.gallery .gallery-title h2{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.gallery .gallery-title span{
+    padding: 0 20px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    color: var(--grey2);
+    text-align: center;
+    margin-bottom: 30px;
+}
+.view-gallery{
+    display: flex;
+    margin: 0 auto;
+    cursor: pointer;
+    padding: 8px 62px;
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 1px solid var(--black);
+    transition: all .3s ease-in-out;
+}
+.view-gallery:hover{
+    color: var(--black);
+    background-color: var(--white);
+}
+/* hover  */
+.container .list-item{
+    position: relative;
+}
+.container .list-item img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.container .list-item .overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f87977;
+    opacity: 0;
+    width: 100%;
+    height: 0;
+    transition: all .7s ease;
+}
+.container .list-item .overlay .text{
+    position: absolute;
+    font-size: 40px;
+    color: var(--white);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container .list-item:hover .overlay{
+    top:0;
+    height: 100%;
+    opacity: .7;
+}
+/* dot  */
+.gallery .owl-nav{
+    display: none;
+
+}
+/* .gallery .owl-nav button{
+    background-color: var(--white);
+    border: 1px;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: all .3s ease-in;
+    border-radius: 50%;
+    border: 1px solid;
+}
+.gallery .owl-nav span {
+    font-size: 25px;
+}
+.gallery .owl-nav button:hover {
+    background-color: var(--black);
+}
+.gallery .owl-nav button:hover span {
+    color: var(--white);
+} */
+
+@media (max-width: 767px){
+    .gallery .gallery-title h2{
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+}
+@media (max-width: 575px){
+    .gallery .gallery-title h2{
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    
+}
+@media (max-width: 480px){
+    .gallery .gallery-title h2{
+        font-size: 16px;
+    }
+
+}

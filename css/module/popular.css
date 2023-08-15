@@ -1,0 +1,132 @@
+.popular .popular-title h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.popular .popular-layout{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.popular-item{
+    width: 25%;
+    padding: 0 15px;
+}
+.popular-content{
+    transition: all .5s ease;
+}
+.popular-content:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.popular-info {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.popular-info span {
+    color: var(--grey2);
+    font-size: 14px;
+}
+.popular-info .star i {
+    color: var(--primary);
+    font-size: 12px;
+}
+.popular-info .price span {
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 600;
+}
+.popular-info .price .root-price {
+    font-size: 12px;
+    color: var(--grey2);
+    margin-left: 10px;
+}
+.overlay {
+    position: relative;
+}
+.overlay .action-link{
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+    transition: all .3s ease-in;
+    width: 100%;
+    text-align: center;
+}
+.overlay .action-link .icon i{
+    padding: 15px;
+    border-radius: 50%;
+    background-color: var(--white);
+    transition: all .2s ease-in;
+    opacity: 0;
+    visibility: hidden;
+}
+.overlay .action-link .icon i:hover{
+    background-color: var(--primary);
+    color: var(--white);
+}
+.popular-item:hover .overlay .action-link .icon i{
+    opacity: 1;
+    visibility: visible;
+}
+.popular-item:hover .overlay .action-link{
+    bottom: 20%;
+}
+.overlay .action-link i:first-child{
+    transition-delay: 0.1s;
+}
+.overlay .action-link i:nth-child(2){
+    transition-delay: 0.3s;
+}
+.overlay .action-link i:nth-child(3){
+    transition-delay: 0.45s;
+}
+@media (max-width: 991px){
+    .popular .popular-layout .popular-item{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    
+}
+@media (max-width: 767px){
+    .popular .popular-title h2{
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+}
+@media (max-width: 575px){
+    .popular .popular-title h2{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    section.popular{
+        margin-bottom: 10px;
+    }
+    .popular-item{
+        padding: 0 7px;
+    }
+}
+@media (max-width: 480px){
+    .popular .popular-title h2{
+        font-size: 16px;
+    }
+    .overlay .action-link .icon i {
+        padding: 10px;
+    }
+    .popular-item:hover .overlay .action-link{
+        bottom: 15%;
+    }
+    .popular-info span {
+        font-size: 12px;
+    }
+    .popular-info .price span {
+        font-size: 14px;
+    }
+    .popular-info .price .root-price {
+        font-size: 10px;
+    }
+}

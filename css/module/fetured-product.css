@@ -1,0 +1,113 @@
+.featured .featured-title h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.featured .produtc-layout{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+}
+.featured .produtc-layout .product-item{
+    padding: 0 15px;
+}
+.product-info{
+    text-align: center;
+    padding: 15px 0;
+}
+.product-info span{
+    color: var(--grey2);
+    font-size: 14px;
+}
+.product-info .star i{
+    color: var(--primary);
+    font-size: 12px;
+}
+.product-info .price span{
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 600;
+}
+.product-info .price .root-price{
+    font-size: 12px;
+    color: var(--grey2);
+    margin-left: 10px;
+}
+.overlay {
+    position: relative;
+}
+.overlay .action-link{
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+    transition: all .3s ease-in;
+    width: 100%;
+    text-align: center;
+}
+.overlay .action-link .icon i{
+    padding: 15px;
+    border-radius: 50%;
+    background-color: var(--white);
+    transition: all .2s ease-in;
+    opacity: 0;
+    visibility: hidden;
+}
+.overlay .action-link .icon i:hover{
+    background-color: var(--primary);
+    color: var(--white);
+}
+.product-item:hover .overlay .action-link .icon i{
+    opacity: 1;
+    visibility: visible;
+}
+.product-item:hover .overlay .action-link{
+    bottom: 20%;
+}
+.overlay .action-link i:first-child{
+    transition-delay: 0.1s;
+}
+.overlay .action-link i:nth-child(2){
+    transition-delay: 0.3s;
+}
+.overlay .action-link i:nth-child(3){
+    transition-delay: 0.45s;
+}
+@media (max-width: 767px){
+    .featured .featured-title h2{
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+}
+@media (max-width: 575px){
+    section.featured{
+        margin: 0;
+    }
+    .featured .featured-title h2{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .featured .produtc-layout{
+        flex-direction: column;
+    }
+    .featured .produtc-layout .product-item{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .featured .produtc-layout .product-item img{
+        width: 100%
+    }
+    .featured .produtc-layout .product-item{
+        padding: 0;
+    }
+
+}
+@media (max-width: 480px){
+    .featured .featured-title h2{
+        font-size: 16px;
+    }
+}

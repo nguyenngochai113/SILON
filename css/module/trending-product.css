@@ -1,0 +1,195 @@
+.trending .trending-title h2{
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 600;
+}
+.trending .trending-title{
+    justify-content: space-between;
+    padding: 0 65px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.treding-categories{
+    justify-items: center;
+}
+.treding-categories li{
+    padding: 0 20px;
+    color: var(--grey2);
+    transition: .3s ease;
+} 
+
+.treding-categories li:first-child{
+    color: var(--black);
+}
+.treding-categories li a{
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.treding-categories li:hover{
+    color: var(--black);
+}
+.treding-categories li a::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    height: 2px;
+    bottom: 0;
+    width: 0%;
+    background-color: var(--black);
+    transition: .3s linear;
+}
+.treding-categories li a.active::before,
+.treding-categories li a:hover::before{
+    width: 100%;
+    left: 0;
+}
+
+.treding-categories li:last-child{
+    padding-right: 0;
+} 
+.trending .trending-layout{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.trending-item{
+    width: 25%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+.trending-content{
+    transition: all .5s ease;
+}
+.trending-content:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.trending-info {
+    text-align: center;
+    padding: 15px 0;
+}
+.trending-info span {
+    color: var(--grey2);
+    font-size: 14px;
+}
+.trending-info .star i {
+    color: var(--primary);
+    font-size: 12px;
+}
+.trending-info .price span {
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 600;
+}
+.trending-info .price .root-price {
+    font-size: 12px;
+    color: var(--grey2);
+    margin-left: 10px;
+}
+.overlay {
+    position: relative;
+}
+.overlay .action-link{
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+    transition: all .3s ease-in;
+    width: 100%;
+    text-align: center;
+}
+.overlay .action-link .icon i{
+    padding: 15px;
+    border-radius: 50%;
+    background-color: var(--white);
+    transition: all .2s ease-in;
+    opacity: 0;
+    visibility: hidden;
+}
+.overlay .action-link .icon i:hover{
+    background-color: var(--primary);
+    color: var(--white);
+}
+.trending-item:hover .overlay .action-link .icon i{
+    opacity: 1;
+    visibility: visible;
+}
+.trending-item:hover .overlay .action-link{
+    bottom: 20%;
+}
+.overlay .action-link i:first-child{
+    transition-delay: 0.1s;
+}
+.overlay .action-link i:nth-child(2){
+    transition-delay: 0.3s;
+}
+.overlay .action-link i:nth-child(3){
+    transition-delay: 0.45s;
+}
+@media (max-width: 991px){
+    .trending .trending-layout .trending-item{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    .trending-title{
+        display: block;
+    }
+    .trending .trending-title h2{
+        text-align: center;
+    }
+    .treding-categories{
+        justify-content: center;
+    }
+}
+@media (max-width: 767px){
+    .trending .trending-title h2{
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+    
+}
+@media (max-width: 575px){
+    .trending .trending-title h2{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    section.trending{
+        margin-bottom: 10px;
+    }
+    .trending-item{
+        padding: 0 7px;
+    }
+}
+@media (max-width: 480px){
+    .trending .trending-title h2{
+        font-size: 16px;
+    }
+    .overlay .action-link .icon i {
+        padding: 10px;
+    }
+    .trending-item:hover .overlay .action-link{
+        bottom: 15%;
+    }
+    .trending-info span {
+        font-size: 12px;
+    }
+    .trending-info .price span {
+        font-size: 14px;
+    }
+    .trending-info .price .root-price {
+        font-size: 10px;
+    }
+}
+@media (max-width: 320px){
+  .treding-categories li{
+    font-size: 10px;
+  }
+  .treding-categories li {
+    padding: 0px 15px;
+}
+}
+

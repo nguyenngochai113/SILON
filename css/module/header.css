@@ -1,0 +1,311 @@
+.header{
+    position: relative;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
+}
+.header .wrapper{
+    padding: 25px 50px;
+}
+/* header sticky */
+.header .wrapper{
+    left: 0;
+    bottom:0;
+    width: 100%;
+}
+.header.active .wrapper{
+    position: fixed;
+    top: -100px;
+    bottom: auto;
+    box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
+    animation: slideDown .5s ease-out forwards;
+    z-index: 9999;
+    background-color: var(--white);
+}
+@keyframes slideDown{
+    0% { transform: translateY(0);}
+    100% {transform: translateY(100%);}
+}
+/* header sticky */
+/* header top  */
+.header-top{
+    background-color: #000000;
+    padding: 10px 50px;
+}
+.header-top .row{
+    justify-content: space-between;
+}
+.header-top-right .navUser-section li{
+    padding: 0 10px;
+    color: var(--white);
+    opacity: .7;
+    font-size: 12px;
+    transition: .3s ease;
+    border-left: 1px solid var(--white);
+}
+
+.header-top-right .navUser-section li:first-child{
+    border-left: none;
+}
+.header-top-right .navUser-section li:hover{
+    color: var(--primary);
+}
+.header-top-right .navUser-section li a i{
+    margin-right: 5px;
+    font-size: 15px;
+}
+.header-top strong{
+    color: var(--white);
+    font-size: 12px;
+    cursor: pointer;
+    transition: .3s ease;
+    font-weight: 600;
+}
+.header-top strong:hover{
+    color: var(--primary);
+}
+.header-top span{
+    color: var(--grey2);
+    font-size: 12px;
+    cursor: pointer;
+}
+/* header top  */
+.header .wrapper{
+    justify-content: space-between;
+}
+.header .navbar .nav-list li{
+    padding: 12px 20px;
+    position: relative;
+}
+.header .navbar .nav-list .close-btn{
+    text-align: end;
+}
+.header .navbar .nav-list .close-btn i{
+    font-size: 20px;
+    padding: 5px 5px;
+    border: 1px solid var(--black);
+}
+.header .navbar .nav-list .close-btn:hover i{
+    transform: rotate(45deg);
+}
+.header .navbar .nav-list li a{
+    position: relative;
+    padding-bottom: 5px;
+}
+.header .navbar .nav-list li .close-btn:first-child::before{
+    height: 0;
+}
+.header .navbar .nav-list li a::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    height: 2px;
+    bottom: 0;
+    width: 0%;
+    background-color: var(--black);
+    transition: .3s linear;
+}
+.header .navbar .nav-list li a.active::before,
+.header .navbar .nav-list li a:hover::before{
+    width: 100%;
+    left: 0;
+}
+.header .navbar .nav-list li a{ 
+    color: var(--black);
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.header .wrapper .icons a { 
+    padding: 0 8px;
+}
+.header .wrapper .icons a i{ 
+    color: var(--black);
+    font-size: 20px;
+    transition: all .2s ease-in-out;
+}
+.header .wrapper .icons a i:hover{ 
+    margin-top: -5px;
+}
+.header .wrapper .icons a i:hover{ 
+    color: var(--primary);
+}
+.header .wrapper .icons{
+    position: relative;
+}
+.header .wrapper .icons span{
+    position: absolute;
+    background-color: var(--primary);
+    top: -9px;
+    margin-left: 12px;
+    color: var(--white);
+    font-size: 12px;
+    height: 18px;
+    width: 17px;
+    border-radius: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+#toggle-menu{
+    display: none;
+}
+.toggle-menu a i{
+    font-size: 20px;
+}
+.header .wrapper .icons-mb{
+    display: none;
+}
+.logo-mb{
+    display: none;
+}
+.close-btn{
+    display: none;
+}
+/* sale lable  */
+.sale-lable{
+    width: 38px;
+    height: 18px;
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: 10px;
+    padding: 5px 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    text-transform: uppercase;
+}
+.sale-lable::after{
+    content: '';
+    width: 0;
+    height: 0;
+    border-bottom: 5px solid transparent;
+    border-left: 3px solid transparent;
+    border-top: 7px solid var(--primary);
+    border-right: 5px solid transparent;
+    position: absolute;
+    left: 10%;
+    top: 100%;
+}
+/* search-bar */
+.search-bar{
+    width: 100%;
+    position: fixed;
+    height: 200px;
+    background-color: var(--white);
+    color: var(--black);
+    left: 0;
+    top: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-input{
+    width: 1144px;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--grey2);
+    padding-bottom: 5px;
+    transition: all .3s ease;
+}
+.search-input:hover{
+    border-bottom: 2px solid var(--black);
+}
+.search-input .bx-search{
+    font-size:20px;
+}
+.search-bar .search-input input{
+    border: 0;
+    width: 100%;
+    outline: none;
+}
+
+.search-bar {
+    display: none;
+}
+.search-bar-active{
+    display: flex;
+}
+@media (max-width:991px){
+
+    .header-top{
+        display: none;
+    }
+    .close-btn{
+        display: block;
+    }
+    .logo-mb{
+        display: block;
+    }
+    .header .navbar .nav-list li a.logo-mb {
+        padding-bottom: 0;
+    }
+    .logo-mb img{
+        width: 100px;
+    }
+    #toggle-menu a i{
+        font-size: 20px;
+    }
+    .header.active .wrapper{
+        border-top: 1px solid;
+        top: -85px;
+    }
+    .header .wrapper.container{
+        padding: 20px 15px;
+    }
+    .container{
+        padding: 10px 10px;
+    }
+    .header .nav-list .icons{
+        display: none;
+    }
+    .icons{
+        display: flex;
+    }
+    #toggle-menu{
+        display: block;
+    }
+    .header .navbar{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+        background-color: var(--white);
+        height: 100vh;
+        max-width: 70%;
+        width: 100%;
+        z-index: 999;
+        transition: all .3s ease-in-out;
+        overflow-y: scroll;
+    }
+    .header .navbar.active{
+        left: 0;
+        width: 100%;
+    }
+    .header .navbar .nav-list{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .header .navbar .nav-list li{
+        width: 100%;
+        border-bottom: 1px solid #ebebeb;
+    }
+    .header .wrapper .icons a { 
+        padding: 0 5px;
+    }
+    .header .wrapper{
+        padding: 25px 20px;
+    }
+    .sale-lable{
+        display: none !important;
+    }
+}
+@media (max-width: 767px){
+    .search-bar{
+        height: 100px;
+    }
+}
+
